@@ -1,1 +1,1 @@
-Yoo mr white
+echo "Yoo mr white"
